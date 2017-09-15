@@ -18,12 +18,12 @@ yum groupinstall --enablerepo=epel  'Development Tools'
 ```
 ### Install dependecies
 ```sh
-# cd ~/rpmbuild
-# yum-builddep SPECS/nginx.spec
+cd ~/rpmbuild
+yum-builddep SPECS/nginx.spec
 ```
 ## Build
 ```sh
-# cd ~/rpmbuild
+cd ~/rpmbuild
 rpmbuild -bb nginx-naxsi-ldap/rpmbuild/SPECS/nginx.spec
 ```
 ## Install
