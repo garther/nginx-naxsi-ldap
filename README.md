@@ -14,12 +14,13 @@ mv nginx-naxsi-ldap/rpmbuild ~/
 ### Install prereqs:
 This group has everything is needed to start building RPM from source.
 ```sh
+yum -y install epel-release
 yum groupinstall --enablerepo=epel  'Development Tools'
-```
-### Install dependecies
-```sh
-cd ~/rpmbuild
-yum-builddep SPECS/nginx.spec
+yum -y install GeoIP-devel openssl-devel zlib-devel pcre-devel -y
+yum -y install gd-devel
+yum -y install perl-devel perl-ExtUtils-Embed
+yum -y install libxslt-devel
+yum -y install openldap-devel
 ```
 ## Build
 ```sh
